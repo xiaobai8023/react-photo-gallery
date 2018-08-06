@@ -8,6 +8,7 @@
  
 
 发布项目到gh-pages
+
 1、git步骤命令(运行命令前需要打包dist，运行npm run dist即可打包)
 
     git add dist

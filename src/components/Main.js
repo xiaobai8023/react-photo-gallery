@@ -165,7 +165,7 @@ class AppComponent extends React.Component {
       halfImgH = Math.ceil(imgH / 2);
 
 
-    this.Constant.centerPos = { left: halfStageW - halfImgW, top: halfStageH - halfImgH };
+    this.Constant.centerPos = { left: halfStageW - halfImgW - 100, top: halfStageH - halfImgH - 200 };
 
     this.Constant.hPosRange.leftSecX[0] = -halfImgW;
     this.Constant.hPosRange.leftSecX[1] = halfStageW - halfImgW * 3;

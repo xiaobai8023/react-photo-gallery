@@ -55,8 +55,8 @@ class ImgFigure extends React.Component {
     styleObj.zIndex = this.props.arrange.isCenter ? 200 : (100 - this.props.index);
 
     if (this.props.arrange.rotate) {
-      ['-moz-', '-ms-', '-webkit-', ''].forEach(vandor => {
-        styleObj[vandor + 'transform'] = 'rotate(' + this.props.arrange.rotate + 'deg)';
+      ['MozTransform', 'msTransform', 'WebkitTransform', 'transform'].forEach(vandor => {
+        styleObj[vandor] = 'rotate(' + this.props.arrange.rotate + 'deg)';
       }, this);
 
     }
@@ -165,7 +165,7 @@ class AppComponent extends React.Component {
       halfImgH = Math.ceil(imgH / 2);
 
 
-    this.Constant.centerPos = { left: halfStageW - halfImgW - 100, top: halfStageH - halfImgH - 200 };
+    this.Constant.centerPos = { left: halfStageW - halfImgW, top: halfStageH - halfImgH };
 
     this.Constant.hPosRange.leftSecX[0] = -halfImgW;
     this.Constant.hPosRange.leftSecX[1] = halfStageW - halfImgW * 3;
